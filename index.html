@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+
+
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Emporio de Patricio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Productos">Productos</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#carritoModal">
+                            Carrito <span id="carritoCount" class="badge badge-pill badge-primary text-light">🛒</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+     <!-- HEADER -->
+    <header class="bg-light text-white text-center py-5" id="seccion_header">
+        <div class="container">
+            <h1 class="display-4 fw-normal text-body-emphasis">Supermercados "El Emporio de Patricio"</h1>
+            <p class="lead">¡Todo lo que necesitas con el vecino de siempre!</p>
+        </div>
+    </header>
+
+        <!--Productos-->
+        <div class="container" id="Productos">
+            <h1 class="my-4">Productos</h1>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center" id="listadoproductos">
+                <!-- Aquí se mostrarán los productos -->
+            </div>
+        </div>
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="carritoModalLabel">Carrito de Compras</h1>
+                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul id="detalleCarrito">
+                            <!-- Detalles del carrito se mostrarán aquí -->
+                        </ul>
+                        <p id="totalCompra"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Seguir Comprando</button>
+                        <button type="button" class="btn btn-success" onclick="finalizarCompra()">Finalizar
+                            Compra</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="pagoFinalizado" tabindex="-1" aria-labelledby="pagoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="pagoModalLabel">Finalizar Compra</h1>
+                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Total a pagar: </p>
+                        <h3 id="total"></h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" id="pagar">Pagar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+  <!-- Pie de página -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+        <p>&copy; 2024 Emporio de Patricio. Todos los derechos reservados.</p>
+        <p>Sígueme en <a href="#" class="text-white">LinkedIn</a> | <a href="#" class="text-white">GitHub</a> | <a
+                href="#" class="text-white">Twitter</a></p>
+    </div>
+</footer>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./assets/js/scripts.js"></script>
+
+</body>
+
+</html>
